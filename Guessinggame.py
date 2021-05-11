@@ -50,5 +50,4 @@ if question.lower() == "yes":
             a += 1
             score -= 1
             continue
-            #I know my code is not perfect but if it is possible I would like to get feedback what I could do better
-     
+            

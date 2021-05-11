@@ -12,8 +12,7 @@ question = input("would you like to play the game? (yes/no)")
 if question.lower() == "yes":
     Solution = random.randrange(25, 50)
     a = 0
-    score = 0
-    guess = int(input("Press 1 to continue  ")) 
+    score = 0 
     while True:
         guess = int(input("What is your guess?   "))
         if guess == Solution:

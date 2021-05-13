@@ -6,47 +6,45 @@ def start_game():
     Enter "DONE" if you want to finish the game.
     Enter "TRY" To play the game again.
     """)
-print("Welcome to number quessing game!")
+print("Welcome to number quessing game!\nIn this game you choose a number in range of 25-49 good luck and have fun !")
 question = input("would you like to play the game? (yes/no)")
-
 if question.lower() == "yes":
     Solution = random.randrange(25, 50)
     a = 0
-    score = 0 
+    X = []
     while True:
-        guess = int(input("What is your guess?   "))
-        if guess == Solution:
-            print("You got it!")
-            print("The number of wrong guesses is", a)
-            score += 20
-            print("Your total score is:", score)
-            print("the best possible score is 20 per game")
-            start_game()
-            Solution = random.randrange(25, 50)
-            quest = input(">    ")
-            if quest.upper() == "DONE":
-                break
-            elif quest.upper() == "TRY":
-                guess = input("What is your guess?")
-                continue   
-        elif guess > 50:
-            print("Your number is way too high! Try again!")
-            a += 1
-            score -= 1
-            continue
-        elif guess < 25:
-            print("Your number is way too low! Try again!")
-            a += 1
-            score -= 1
-            continue
-        elif guess > Solution:
-            print("Its lower! Try again!")
-            a += 1
-            score -= 1
-            continue
-        elif guess < Solution:
-            print("Its higher! Try again!")
-            a += 1
-            score -= 1
-            continue
+        try:
+            guess = int(input("What is your guess?   "))  
+            if guess > 49 or guess < 25:
+                raise ValueError("oh uh we run into an issue!")
             
+        except ValueError as err:
+            print("Your number is too high/low and make sure it is number! Please try again!")
+            
+        else:    
+            if guess == Solution:
+                print("You got it!")
+                print("The number of wrong guesses is", a)
+                X.append(int(a))
+                b = min(X)
+                print("the best score so far:", b)
+                start_game()
+                Solution = random.randrange(25, 50)
+                quest = input(">    ")
+                if quest.upper() == "DONE":
+                    print("Thank you for playing the game!")
+                    break
+                elif quest.upper() == "TRY":
+                    a = 0
+                    continue   
+            elif guess > Solution:
+                print("Its lower! Try again!")
+                a += 1
+                continue
+            elif guess < Solution:
+                print("Its higher! Try again!")
+                a += 1
+                continue
+            elif guess > 49:
+                raise ValueError("oh uh we run into an issue!")
+                continue

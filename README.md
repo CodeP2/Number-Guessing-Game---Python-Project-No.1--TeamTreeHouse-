@@ -1,7 +1,7 @@
 # Number Guessing Game - Python Project No.1 (TeamTreeHouse)
  
 This is my 1st project
-I know it dosen't show the if the numbr is higher or lower but this might not be the best solution with ("Press 1 to continue") 
+I know it dosen't show the if the number is higher or lower but this might not be the best solution with ("Press 1 to continue") 
 but for now its good I suppouse I was thinking about how to make it appear and chaning the order messes up my code so this might be the 
 best solution for now altho I would like to know more,
 I was using my workshop for this project I couldn't fing anything much helpful for this project on google

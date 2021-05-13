@@ -13,6 +13,7 @@ https://docs.python.org/3/library/stdtypes.html#list.sort
 function and because I had error about for i in X because loop for will not do for int I had to change it but this post made me understand:
 https://stackoverflow.com/questions/19523563/python-typeerror-int-object-is-not-iterable
 as for code usege I couldn't really find anything but at least I got function that helped me to do the high score if anythin I was using my workshop codes to help me so I can't really link them but I kind of combined all of the lessons I had well I was watching
+Also I had issue with try block well mostly it was with order or I would say missing except I spend well some time to figure it out but I don't really want ot use google too much or at all if possible but for the condition I was using and but for python language its both condition must be true so thats why I changed to or I was ohh it bool 
 """
 Python Web Development Techdegree
 Project 1 - Number Guessing Game

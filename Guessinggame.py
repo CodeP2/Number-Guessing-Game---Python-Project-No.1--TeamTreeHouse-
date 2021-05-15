@@ -11,7 +11,9 @@ question = input("would you like to play the game? (yes/no)")
 if question.lower() == "yes":
     Solution = random.randrange(25, 50)
     a = 0
-    X = []
+    X = [20, ]
+    b = min(X)
+    print("the best score so far (score is based on how many wrong guesses you made(example: I made 1 mistake so my score is 1 and that is the best score)):", b)
     while True:
         try:
             guess = int(input("What is your guess?   "))  
@@ -21,7 +23,7 @@ if question.lower() == "yes":
         except ValueError as err:
             print("Your number is too high/low and make sure it is number! Please try again!")
             
-        else:    
+        else:
             if guess == Solution:
                 print("You got it!")
                 print("The number of wrong guesses is", a)

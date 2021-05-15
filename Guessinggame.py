@@ -13,7 +13,7 @@ if question.lower() == "yes":
     a = 0
     X = [20, ]
     b = min(X)
-    print("the best score so far (score is based on how many wrong guesses you made(example: I made 1 mistake so my score is 1 and that is the best score)):", b)
+    print("the best score so far (score is based on how many wrong guesses you made):", b)
     while True:
         try:
             guess = int(input("What is your guess?   "))  
@@ -38,6 +38,8 @@ if question.lower() == "yes":
                     break
                 elif quest.upper() == "TRY":
                     a = 0
+                    b = min(X)
+                    print("the best score so far:", b)
                     continue   
             elif guess > Solution:
                 print("Its lower! Try again!")

@@ -49,6 +49,3 @@ if question.lower() == "yes":
                 print("Its higher! Try again!")
                 a += 1
                 continue
-            elif guess > 49:
-                raise ValueError("oh uh we run into an issue!")
-                continue
